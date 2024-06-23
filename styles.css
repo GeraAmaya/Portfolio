@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos */
+body {
+    /*
+    background: #67B26F;  
+    background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  
+    background: linear-gradient(to right, #4ca2cd, #67B26F); 
+    */
+    /*
+    background: #141E30;  
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  
+    background: linear-gradient(to right, #243B55, #141E30); 
+    */
+    
+    background: #2C3E50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+
+    
+    font-family: "Roboto Condensed", sans-serif;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilos para la navegación */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    padding: 1rem;
+    background-color: transparent; /* Fondo transparente por defecto */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: white; /* Ajusta el color según tu necesidad */
+}
+
+.nav-links a:hover {
+    background-color: #333;
+}
+
+/* Icono del menú para dispositivos móviles */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.menu-icon-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+
+/*--------------------------------------------------*/
+/* Estilos para el header */
+.hero {
+
+    color: #fff; /* Texto blanco */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    background-position: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+    margin-left: 80px;
+}
+
+.h1-name{
+    background-image: linear-gradient(to right, #dbe4ea, #8d8282);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+        font-size: 4.5rem;  
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: normal;   
+}
+
+.h1-name2{
+    background-image: linear-gradient(to right, #36d0ff, #2a58a8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 4.5rem;  
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal; 
+    margin-top: -35px;  
+}
+
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+
+
+/* Sobre mí */
+#about {
+    padding: 50px 0;
+    color: #fff; /* Texto blanco */
+}
+
+.about-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+    flex: 2;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff; /* Texto blanco */
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ccc; /* Texto gris claro */
+}
+
+
+/* Estilos para la sección de servicios */
+#services {
+    padding: 80px 0;
+    text-align: center;
+ 
+    color: #fff; 
+}
+
+#services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #2e2e2e; /* Fondo de las tarjetas */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+/* Habilidades */
+#skills {
+    padding: 5rem 2rem;
+
+    color: #ffffff;
+    text-align: center;
+}
+
+.skills-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background-color: #1f1f1f;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.skill-bar {
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 25px;
+}
+
+.skill-level {
+    background-color: #ff5733;
+    height: 100%;
+    transition: width 1s;
+}
+
+
+/* Estilos para la sección de proyectos */
+#projects {
+    padding: 50px 0;
+    color: #fff; /* Texto blanco */
+}
+
+.projects-container {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #333; /* Fondo ligeramente más claro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #fff; /* Texto blanco */
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #ccc; /* Texto gris claro */
+}
+
+.tech-stack {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-stack img.icon-svg {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.project-links .icon-link img.icon-svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.project-links .icon-link:hover img.icon-svg {
+    transform: scale(1.2);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Estilos para la sección de contacto */
+#contact {
+    padding: 80px 0;
+    text-align: center;
+   
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-form form {
+    width: 60%;
+    text-align: left;
+    padding: 20px;
+    background-color: #fff; /* Fondo del formulario */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 8px;
+}
+.container h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+ 
+}
+
+.idea{
+    background-image: linear-gradient(to right, #ffffff, #f63a3788);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+        font-size: 4.5rem;  
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: normal;   
+   
+}
+
+.contact-form form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #1f1f1f;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form form button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form form button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el cursor */
+}
+
+.contact-info {
+    width: 30%;
+    text-align: left;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+    color: #007bff; /* Color del icono */
+}
+
+.social-icons{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+
+    .hero h1 {
+         font-size: 2.5rem;
+    }
+    
+    .hero p {
+            font-size: 1.2rem;
+    }
+    
+    /*------------------*/
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+/*------------*/
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 200px;
+    }
+
+
+      /*-------*/
+
+      #services h2 {
+        font-size: 2rem;
+    }
+    .section-description {
+        font-size: 1rem;
+    }
+    .service-card h3 {
+        font-size: 1.25rem;
+    }
+    .service-card p {
+        font-size: 0.9rem;
+    }
+
+    /*-------*/
+
+    .contact-form {
+        margin: 5px;
+        flex-direction: column; /* Cambiar a diseño de columna en dispositivos móviles */
+    }
+
+    .contact-info,
+    .contact-form form {
+        width: 100%; /* Ajustar anchos al 100% en dispositivos móviles */
+    }
+
+    .contact-info {
+        margin: 10px;;
+        margin-bottom: 10px; /* Eliminar margen inferior en dispositivos móviles */
+
+    }
+
+.social-icons {
+    margin: 30px;
+        margin-bottom: 10px; /* Espacio inferior entre íconos en dispositivos móviles */
+    }
+
+  
+}
