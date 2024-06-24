@@ -635,26 +635,58 @@ footer p {
     .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
-        text-align: center;
+        position: absolute;
+        top: 80px; /* Asegura que el menú aparezca justo debajo del ícono del menú */
+        border-radius: 30px;
+        left: auto; /* Asegura que el menú no se quede pegado al margen izquierdo */
+        width: 90%;
+        background-color: #333333e3;
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 9;
     }
+
 
     .menu-icon {
         display: flex;
+        margin-bottom: 10px;
+      
+    }
+
+    
+    .menu-icon-bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+       
     }
 
     .nav-links.active {
         display: flex;
+        animation: fadeIn 0.5s ease-in-out;
     }
 
     .nav-links a {
         padding: 1rem;
+        text-align: center;
     }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
 
   
 /*------------*/
 
     .about-container {
+        margin-top: -150px;
         flex-direction: column;
         text-align: center;
     }
