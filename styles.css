@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+
+
+
+
+
+
+
+
 /* Reset de estilos */
 * {
     margin: 0;
@@ -23,10 +31,8 @@ body {
     */
     
     background: #2C3E50;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    
+background: -webkit-linear-gradient(to right, #000000, #304860);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2f5056, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     
     font-family: "Roboto Condensed", sans-serif;
@@ -36,6 +42,31 @@ background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, F
 a {
     text-decoration: none;
     color: inherit;
+}
+
+
+
+
+/* Botón flotante para ir arriba */
+#scrollToTopBtn {
+    display: none; /* Escondido por defecto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Asegura que el botón esté encima de otros elementos */
+    background-color: #0a0a0a; /* Color de fondo */
+    color: white; /* Color del icono */
+    border: none; /* Sin borde */
+    padding: 15px;
+    border-radius: 50%; /* Hacer el botón redondo */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    font-size: 18px;
+    box-shadow: 0 0 10px #2C3E50; /* Sombra */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #0056b3; /* Color al pasar el cursor */
 }
 
 /* Estilos para la navegación */
@@ -170,6 +201,7 @@ nav {
 .about-container {
     max-width: 960px;
     margin: 0 auto;
+    padding-top: 55px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -220,6 +252,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    padding-top: 55px;
 }
 
 #services h2 {
@@ -283,6 +316,7 @@ nav {
 .skills-container {
     max-width: 1000px;
     margin: 0 auto;
+    padding-top: 35px;
 }
 
 .skills-container h2 {
@@ -342,6 +376,7 @@ nav {
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
+    padding-top: 55px;
 }
 
 .projects-container h2 {
@@ -444,6 +479,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    
 }
 
 .contact-form form {
@@ -533,6 +569,25 @@ nav {
 .social-icons{
     display: flex;
     justify-content: space-between;
+}
+
+/* Estilos para el footer */
+footer {
+    color: #fff; 
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
 }
 
 
@@ -639,5 +694,12 @@ nav {
         margin-bottom: 10px; /* Espacio inferior entre íconos en dispositivos móviles */
     }
 
-  
+    /*-------*/
+
+    footer p {
+        font-size: 0.9rem;
+    }
 }
+
+  
+

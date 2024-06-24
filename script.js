@@ -48,3 +48,24 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.nav-links').classList.toggle('active');
     });
 
+// Obtener el botón
+let mybutton = document.getElementById("scrollToTopBtn");
+
+// Mostrar el botón cuando el usuario se desplaza hacia abajo 20px desde la parte superior del documento
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// Cuando el usuario hace clic en el botón, desplazarse hacia la parte superior del documento
+mybutton.addEventListener("click", function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
