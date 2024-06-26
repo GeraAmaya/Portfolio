@@ -185,6 +185,29 @@ nav {
     margin-bottom: 40px;
     font-weight: 300;
 }
+/* Estilos para los botones en la sección del encabezado */
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+   
 
 
 
@@ -624,6 +647,12 @@ footer p {
     .hero-image {
         display: none; /* Oculta la imagen en dispositivos móviles */
     }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
     
     /*------------------*/
 
@@ -738,7 +767,6 @@ footer p {
     footer p {
         font-size: 0.9rem;
     }
-}
 
   
 
