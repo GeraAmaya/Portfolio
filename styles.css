@@ -206,7 +206,8 @@ nav {
     background-color: #0056b3;
 }
 
-
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
    
 
 
@@ -609,6 +610,7 @@ footer p {
     font-size: 1rem;
 }
 
+/*certificados html */
 
 
 
@@ -648,7 +650,7 @@ footer p {
         display: none; /* Oculta la imagen en dispositivos móviles */
     }
 
-    .btn {
+     .btn {
         font-size: 0.9rem;
         padding: 8px 16px;
     }
@@ -767,6 +769,11 @@ footer p {
     footer p {
         font-size: 0.9rem;
     }
+
+    .modal-content {
+        width: 90%;
+    }
+}
 
   
 
