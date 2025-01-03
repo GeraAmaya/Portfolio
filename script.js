@@ -6,6 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
         navLinks.classList.toggle('active');
     });
 
+
+// Inicializar AOS
+AOS.init({
+    duration: 1000, // Duración de la animación en milisegundos
+    once: true // Animar sólo una vez
+});
+
     // Animación de barras de habilidades al intersectar
     const skillBars = document.querySelectorAll('.skill-level');
     const skillsSection = document.querySelector('#skills');
@@ -47,25 +54,26 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Botón para volver arriba
-let scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
+// Obtener el botón
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Mostrar el botón cuando se desplaza hacia abajo
 window.onscroll = function() {
-    scrollFunction();
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.classList.add("show");
+    } else {
+        scrollToTopBtn.classList.remove("show");
+    }
 };
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopBtn.style.display = "block";
-    } else {
-        scrollToTopBtn.style.display = "none";
-    }
-}
-
-scrollToTopBtn.addEventListener("click", function() {
-    document.body.scrollTop = 0; // Para navegadores Safari
-    document.documentElement.scrollTop = 0; // Para otros navegadores
-});
+// Ir a la parte superior de la página al hacer clic en el botón
+scrollToTopBtn.onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Desplazamiento suave
+    });
+};
 
 // Modal para galería de imágenes de certificados (si lo tienes implementado)
 var modal = document.getElementById("modal");
@@ -88,3 +96,9 @@ span.onclick = function() {
     console.log("Cerrar modal clickeado"); // Añadir este console.log
     modal.style.display = "none";
 }
+
+// Script para el menú hamburguesa
+document.getElementById("menu-icon").addEventListener("click", function() {
+    var navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("active"); // Alternar la clase 'active' para mostrar/ocultar
+});

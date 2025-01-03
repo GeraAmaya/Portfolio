@@ -1,779 +1,719 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-
-
-
-
-
-
-
-
-/* Reset de estilos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilos básicos */
+/* Estilos generales */
 body {
-    /*
-    background: #67B26F;  
-    background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  
-    background: linear-gradient(to right, #4ca2cd, #67B26F); 
-    */
-    /*
-    background: #141E30;  
-    background: -webkit-linear-gradient(to right, #243B55, #141E30);  
-    background: linear-gradient(to right, #243B55, #141E30); 
-    */
-    
-    background: #2C3E50;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #000000, #304860);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #2f5056, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    
+    background: #2C3E50;  
+    background: -webkit-linear-gradient(to right, #000000, #304860);  
+    background: linear-gradient(to right, #2f5056, #2C3E50);   
     font-family: "Roboto Condensed", sans-serif;
     color: #ffffff;
+    margin: 0;
+    padding: 0;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-
-
-/* Botón flotante para ir arriba */
-#scrollToTopBtn {
-    display: none; /* Escondido por defecto */
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99; /* Asegura que el botón esté encima de otros elementos */
-    background-color: #0a0a0a; /* Color de fondo */
-    color: white; /* Color del icono */
-    border: none; /* Sin borde */
-    padding: 15px;
-    border-radius: 50%; /* Hacer el botón redondo */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-    font-size: 18px;
-    box-shadow: 0 0 10px #2C3E50; /* Sombra */
-    transition: background-color 0.3s ease; /* Transición suave */
-}
-
-#scrollToTopBtn:hover {
-    background-color: #0056b3; /* Color al pasar el cursor */
-}
-
-/* Estilos para la navegación */
+/* Navegación */
 nav {
-    position: fixed;
-    top: 0;
+    background: rgba(44, 62, 80, 0.9);
+    position: fixed; /* Fijar la navegación */
     width: 100%;
     z-index: 1000;
-    transition: background-color 0.3s;
-    padding: 1rem;
-    background-color: transparent; /* Fondo transparente por defecto */
+    transition: background 0.3s; /* Transición suave para el fondo */
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 15px 30px;
+}
+
+.logo img {
+    width: 200px; /* Ajustar el tamaño del logo */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 20px;
 }
 
-.nav-links a {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    color: white; /* Ajusta el color según tu necesidad */
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    background-color: #333;
+.nav-links li a:hover {
+    color: #1abc9c;
 }
 
-/* Icono del menú para dispositivos móviles */
+/* Estilos del menú hamburguesa */
 .menu-icon {
-    display: none;
+    display: none; /* Ocultar por defecto */
     flex-direction: column;
-    gap: 0.3rem;
     cursor: pointer;
 }
 
 .menu-icon-bar {
-    width: 25px;
     height: 3px;
-    background-color: #fff;
+    width: 25px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: all 0.3s ease;
 }
 
-
-/*--------------------------------------------------*/
-/* Estilos para el header */
-.hero {
-
-    color: #fff; /* Texto blanco */
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 50px;
-    background-position: center;
-    position: relative;
-}
-
-.hero-content {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.hero-text {
-    flex: 1;
-    text-align: left;
-}
-
-.hero-image {
-    flex: 1;
-    text-align: right;
-    margin-left: 80px;
-  
-}
-
-.h1-name{
-    background-image: linear-gradient(to right, #dbe4ea, #8d8282);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-        font-size: 4.5rem;  
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        font-style: normal;   
-}
-
-.h1-name2{
-    background-image: linear-gradient(to right, #36d0ff, #2a58a8);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: 4.5rem;  
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: normal; 
-    margin-top: -35px;  
-}
-
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    font-weight: 300;
-}
-/* Estilos para los botones en la sección del encabezado */
-.hero-buttons {
-    margin-top: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007bff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos para dispositivos móviles */
+/* Estilos para el menú hamburguesa en dispositivos móviles */
 @media (max-width: 768px) {
-   
-
-
-
-/* Sobre mí */
-#about {
-    padding: 50px 0;
-    color: #fff; /* Texto blanco */
-}
-
-.about-container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding-top: 55px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-
-.about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.about-image img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.about-text {
-    flex: 2;
-    padding: 20px;
-    text-align: left;
-}
-
-.about-text h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #fff; /* Texto blanco */
-}
-
-.about-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #ccc; /* Texto gris claro */
-}
-
-
-/* Estilos para la sección de servicios */
-#services {
-    padding: 80px 0;
-    text-align: center;
- 
-    color: #fff; 
-}
-
-#services .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    padding-top: 55px;
-}
-
-#services h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.section-description {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.service-card {
-    background-color: #2e2e2e; /* Fondo de las tarjetas */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.service-card p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-
-
-
-/* Habilidades */
-#skills {
-    padding: 5rem 2rem;
-
-    color: #ffffff;
-    text-align: center;
-}
-
-.skills-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-top: 35px;
-}
-
-.skills-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.skill-card {
-    background-color: #1f1f1f;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.skill-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.skill-bar {
-    background-color: #333;
-    border-radius: 5px;
-    overflow: hidden;
-    height: 25px;
-}
-
-.skill-level {
-    background-color: #ff5733;
-    height: 100%;
-    transition: width 1s;
-}
-
-
-/* Estilos para la sección de proyectos */
-#projects {
-    padding: 50px 0;
-    color: #fff; /* Texto blanco */
-}
-
-.projects-container {
-    max-width: 960px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 55px;
-}
-
-.projects-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background-color: #333; /* Fondo ligeramente más claro */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card img {
-    width: 100%;
-    border-radius: 8px 8px 0 0;
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    color: #fff; /* Texto blanco */
-}
-
-.project-card p {
-    font-size: 1rem;
-    color: #ccc; /* Texto gris claro */
-}
-
-.tech-stack {
-    margin: 10px 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.tech-stack img.icon-svg {
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-}
-
-.project-links {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.project-links .icon-link img.icon-svg {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-}
-
-.project-links .icon-link:hover img.icon-svg {
-    transform: scale(1.2);
-}
-
-.project-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.project-link:hover {
-    background-color: #0056b3;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
-}
-
-
-/* Estilos para la sección de contacto */
-#contact {
-    padding: 80px 0;
-    text-align: center;
-   
-}
-
-.contact-form {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    
-}
-
-.contact-form form {
-    width: 60%;
-    text-align: left;
-    padding: 20px;
-    background-color: #fff; /* Fondo del formulario */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    border-radius: 8px;
-}
-.container h2{
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    font-weight: 800;
- 
-}
-
-.idea{
-    background-image: linear-gradient(to right, #ffffff, #f63a3788);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-        font-size: 4.5rem;  
-        font-family: "Poppins", sans-serif;
-        font-weight: 800;
-        font-style: normal;   
-   
-}
-
-.contact-form form .form-group {
-    margin-bottom: 20px;
-}
-
-.contact-form form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #1f1f1f;
-}
-
-.contact-form form input,
-.contact-form form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.contact-form form button {
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form form button:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el cursor */
-}
-
-.contact-info {
-    width: 30%;
-    text-align: left;
-}
-
-.contact-info p {
-    margin-bottom: 20px;
-}
-
-.contact-info ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.contact-info ul li {
-    margin-bottom: 10px;
-}
-
-.contact-info ul li i {
-    margin-right: 10px;
-    color: #007bff; /* Color del icono */
-}
-
-.social-icons{
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Estilos para el footer */
-footer {
-    color: #fff; 
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-/*certificados html */
-
-
-
-
-
-
-
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .hero-content {
-        flex-direction: column;
-    }
-
-    .hero-text {
-        padding-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .hero-text h1 {
-        font-size: 4rem; /* Ajusta el tamaño del texto */
-        
-    }
-
-    .hero-text p {
-        font-size: 1rem; /* Ajusta el tamaño del texto */
-    }
-
-    .hero-image {
-        display: none; /* Oculta la imagen en dispositivos móviles */
-    }
-
-     .btn {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-}
-    
-    /*------------------*/
-
     .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px; /* Asegura que el menú aparezca justo debajo del ícono del menú */
-        border-radius: 30px;
-        left: auto; /* Asegura que el menú no se quede pegado al margen izquierdo */
-        width: 90%;
-        background-color: #333333e3;
-        padding: 1rem 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 9;
-    }
-
-
-    .menu-icon {
-        display: flex;
-        margin-bottom: 10px;
-      
-    }
-
-    
-    .menu-icon-bar {
-        width: 25px;
-        height: 3px;
-        background-color: #fff;
-       
+        display: none; /* Ocultar enlaces por defecto */
+        flex-direction: column; /* Cambiar a columna */
+        position: absolute; /* Posicionar absolutamente */
+        top: 60px; /* Justo debajo de la navegación */
+        left: 0;
+        right: 0;
+        background: rgba(44, 62, 80, 0.9);
+        padding: 20px 0;
+        z-index: 999; /* Asegurarse de que esté por encima */
     }
 
     .nav-links.active {
-        display: flex;
-        animation: fadeIn 0.5s ease-in-out;
+        display: flex; /* Mostrar enlaces cuando el menú está activo */
     }
 
-    .nav-links a {
-        padding: 1rem;
-        text-align: center;
-    }
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .menu-icon {
+        display: flex; /* Mostrar menú hamburguesa en móviles */
     }
 
-
-  
-/*------------*/
-
-    .about-container {
-        margin-top: -150px;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-
-    .about-image img {
-        max-width: 200px;
-    }
-
-
-      /*-------*/
-
-      #services h2 {
-        font-size: 2rem;
-    }
-    .section-description {
-        font-size: 1rem;
-    }
-    .service-card h3 {
-        font-size: 1.25rem;
-    }
-    .service-card p {
-        font-size: 0.9rem;
-    }
-
-    /*-------*/
-
-    .contact-form {
-        margin: 5px;
-        flex-direction: column; /* Cambiar a diseño de columna en dispositivos móviles */
-    }
-
-    .contact-info,
-    .contact-form form {
-        width: 100%; /* Ajustar anchos al 100% en dispositivos móviles */
-    }
-
-    .contact-info {
-        margin: 10px;;
-        margin-bottom: 10px; /* Eliminar margen inferior en dispositivos móviles */
-
-    }
-
-.social-icons {
-    margin: 30px;
-        margin-bottom: 10px; /* Espacio inferior entre íconos en dispositivos móviles */
-    }
-
-    /*-------*/
-
-    footer p {
-        font-size: 0.9rem;
-    }
-
-    .modal-content {
-        width: 90%;
+    .logo  {
+        flex-direction: row;
+        width: 100px; /* Ajustar el tamaño del logo */
     }
 }
 
-  
 
+
+/* Estilos para el encabezado (hero) */
+.hero {
+    padding: 80px 20px; /* Espacio superior para evitar superposición con la navegación */
+    display: flex;
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    align-items: center;
+    text-align: center;
+    background: rgba(44, 62, 80, 0.9); /* Fondo semitransparente */
+}
+
+.hero-content {
+    padding-top: 50px;
+    max-width: 1200px; /* Limitar el ancho del contenido */
+    display: flex; /* Usar flexbox para organizar en columnas */
+    justify-content: space-between; /* Espacio entre columnas */
+    align-items: center; /* Centrar verticalmente */
+    flex-wrap: wrap; /* Permitir que se envuelvan en pantallas pequeñas */
+}
+
+.hero-text {
+    flex: 1; /* Tomar espacio disponible */
+    min-width: 300px; /* Ancho mínimo para la columna de texto */
+    margin-right: 20px; /* Espacio entre texto e imagen */
+}
+
+.h1-name, .h1-name2 {
+    font-size: 3rem; /* Tamaño de fuente grande para el nombre */
+    margin: 0; /* Sin margen */
+}
+
+.h1-name2 {
+    color: #1abc9c; /* Color diferente para el segundo nombre */
+}
+
+p {
+    font-size: 1.5rem; /* Tamaño de fuente para la descripción */
+    margin: 10px 0; /* Margen vertical */
+}
+
+.hero-buttons {
+    margin-top: 20px; /* Espacio superior para los botones */
+}
+
+.btn {
+    background: #1abc9c; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 500; /* Peso de fuente */
+    transition: background 0.3s; /* Transición suave para el fondo */
+    margin: 0 10px; /* Espacio entre botones */
+}
+
+.btn:hover {
+    background: #16a085; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para la imagen */
+.hero-image {
+    flex: 1; /* Tomar espacio disponible */
+    min-width: 300px; /* Ancho mínimo para la columna de imagen */
+    display: flex; /* Usar flexbox para centrar la imagen */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.hero-image img {
+    width: 100%; /* Hacer la imagen responsiva */
+    max-width: 550px; /* Tamaño máximo de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar contenido */
+    }
+
+    .hero-text {
+        margin-right: 0; /* Sin margen en pantallas pequeñas */
+        text-align: center; /* Centrar texto */
+    }
+
+    .hero-image {
+        display: none; /* Ocultar la imagen en pantallas pequeñas */
+    }
+
+    .hero-image img {
+        display: none; /* Asegurarse de que la imagen no se muestre */
+    }
+}
+
+
+/* Estilos para la sección "Sobre Mí" */
+#about {
+    padding: 60px 20px; /* Espaciado superior e inferior */
+    background: rgba(44, 62, 80, 0.9); /* Fondo semitransparente */
+}
+
+.about-container {
+    max-width: 1200px; /* Limitar el ancho del contenedor */
+    display: flex; /* Usar flexbox para organizar en columnas */
+    justify-content: space-between; /* Espacio entre columnas */
+    align-items: center; /* Centrar verticalmente */
+    flex-wrap: wrap; /* Permitir que se envuelvan en pantallas pequeñas */
+}
+
+.about-image {
+    flex: 1; /* Tomar espacio disponible */
+    min-width: 300px; /* Ancho mínimo para la columna de imagen */
+    display: flex; /* Usar flexbox para centrar la imagen */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.about-image img {
+    width: 100%; /* Hacer la imagen responsiva */
+    max-width: 250px; /* Tamaño máximo de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 50%; /* Hacer la imagen redonda */
+}
+
+.about-text {
+    flex: 2; /* Tomar más espacio que la imagen */
+    min-width: 300px; /* Ancho mínimo para la columna de texto */
+    margin-left: 20px; /* Espacio entre texto e imagen */
+}
+
+.about-text h2 {
+    font-size: 2.5rem; /* Tamaño de fuente para el título */
+    margin-bottom: 20px; /* Margen inferior */
+    color: #1abc9c; /* Color del título */
+}
+
+.about-text p {
+    font-size: 1.2rem; /* Tamaño de fuente para el párrafo */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #ffffff; /* Color del texto */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar contenido */
+    }
+
+    .about-image {
+        margin-bottom: 20px; /* Espacio inferior para la imagen en pantallas pequeñas */
+        margin-left: 0; /* Sin margen en pantallas pequeñas */
+    }
+
+    .about-text {
+        margin-left: 0; /* Sin margen en pantallas pequeñas */
+        text-align: center; /* Centrar texto */
+    }
+}
+
+
+/* Estilos para la sección "Servicios" */
+#services {
+    padding: 60px 20px; /* Espaciado superior e inferior */
+    background: rgba(44, 62, 80, 0.9); /* Fondo semitransparente */
+}
+
+.container {
+    max-width: 1200px; /* Limitar el ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+h2 {
+    font-size: 2.5rem; /* Tamaño de fuente para el título */
+    margin-bottom: 20px; /* Margen inferior */
+    text-align: center; /* Centrar el título */
+    color: #1abc9c; /* Color del título */
+}
+
+.section-description {
+    text-align: center; /* Centrar la descripción */
+    font-size: 1.2rem; /* Tamaño de fuente para la descripción */
+    margin-bottom: 40px; /* Margen inferior */
+    color: #ffffff; /* Color del texto */
+}
+
+/* Estilos para la cuadrícula de servicios */
+.services-grid {
+    display: grid; /* Usar grid para organizar las tarjetas */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente para las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    transition: transform 0.3s; /* Transición suave para el efecto hover */
+    opacity: 0; /* Ocultar inicialmente */
+    transform: translateY(20px); /* Mover hacia abajo */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.service-content {
+    display: flex; /* Usar flexbox para organizar el contenido de la tarjeta */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.service-icon {
+    width: 50px; /* Tamaño del ícono */
+    margin-right: 15px; /* Espacio entre el ícono y el texto */
+}
+
+.service-text h3 {
+    font-size: 1.5rem; /* Tamaño de fuente para el título del servicio */
+    margin: 0; /* Sin margen */
+    color: #1abc9c; /* Color del título del servicio */
+}
+
+.service-text p {
+    font-size: 1rem; /* Tamaño de fuente para la descripción del servicio */
+    color: #ffffff; /* Color del texto */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .service-card {
+        margin-bottom: 20px; /* Espacio inferior para las tarjetas en pantallas pequeñas */
+    }
+}
+
+/* Efecto de entrada */
+[data-aos].aos-animate {
+    opacity: 1; /* Mostrar cuando se anima */
+    transform: translateY(0); /* Volver a la posición original */
+}
+
+
+/* Estilos para la sección "Habilidades" */
+#skills {
+    padding: 60px 20px; /* Espaciado superior e inferior */
+    background: rgba(44, 62, 80, 0.9); /* Fondo semitransparente */
+}
+
+.skills-container {
+    max-width: 1200px; /* Limitar el ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    text-align: center; /* Centrar el texto */
+}
+
+h2 {
+    font-size: 2.5rem; /* Tamaño de fuente para el título */
+    margin-bottom: 20px; /* Margen inferior */
+    color: #1abc9c; /* Color del título */
+}
+
+.skills-grid {
+    display: grid; /* Usar grid para organizar las tarjetas */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+/* Estilos para las tarjetas de habilidades */
+.skill-card {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente para las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    transition: transform 0.3s; /* Transición suave para el efecto hover */
+    opacity: 0; /* Ocultar inicialmente */
+    transform: translateY(20px); /* Mover hacia abajo */
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.skill-card h3 {
+    font-size: 1.5rem; /* Tamaño de fuente para el título de la habilidad */
+    margin: 0; /* Sin margen */
+    color: #1abc9c; /* Color del título de la habilidad */
+    display: flex; /* Usar flexbox para alinear el ícono y el texto */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.icon-svg {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.skill-bar {
+    background: rgba(255, 255, 255, 0.2); /* Fondo de la barra de habilidades */
+    border-radius: 5px; /* Bordes redondeados */
+    height: 10px; /* Altura de la barra */
+    margin-top: 5px; /* Espacio superior */
+}
+
+.skill-level {
+    background: #1abc9c; /* Color de la barra de habilidades */
+    height: 100%; /* Altura completa */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .skill-card {
+        margin-bottom: 20px; /* Espacio inferior para las tarjetas en pantallas pequeñas */
+    }
+
+    h2 {
+        font-size: 2rem; /* Tamaño de fuente más pequeño para el título en pantallas pequeñas */
+    }
+
+    .skills-container {
+        padding: 40px 10px; /* Espaciado reducido en pantallas pequeñas */
+    }
+}
+
+/* Efecto de entrada */
+[data-aos].aos-animate {
+    opacity: 1; /* Mostrar cuando se anima */
+    transform: translateY(0); /* Volver a la posición original */
+}
+
+/*-------------------*/
+
+/* Estilos para la sección "Proyectos" */
+#projects {
+    padding: 60px 20px; /* Espaciado superior e inferior */
+    background: rgba(44, 62, 80, 0.9); /* Fondo semitransparente */
+}
+
+.projects-container {
+    max-width: 1200px; /* Limitar el ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    text-align: center; /* Centrar el texto */
+}
+
+h2 {
+    font-size: 2.5rem; /* Tamaño de fuente para el título */
+    margin-bottom: 20px; /* Margen inferior */
+    color: #1abc9c; /* Color del título */
+}
+
+.projects-grid {
+    display: grid; /* Usar grid para organizar las tarjetas */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+/* Estilos para las tarjetas de proyectos */
+.project-card {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente para las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    transition: transform 0.3s; /* Transición suave para el efecto hover */
+    opacity: 0; /* Ocultar inicialmente */
+    transform: translateY(20px); /* Mover hacia abajo */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.project-card img {
+    width: 100%; /* Hacer la imagen responsiva */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.project-card h3 {
+    font-size: 1.5rem; /* Tamaño de fuente para el título del proyecto */
+    margin: 10px 0; /* Margen superior e inferior */
+    color: #1abc9c; /* Color del título del proyecto */
+}
+
+.project-card p {
+    font-size: 1rem; /* Tamaño de fuente para la descripción del proyecto */
+    color: #ffffff; /* Color del texto */
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+.tech-stack {
+    display: flex; /* Usar flexbox para alinear los íconos */
+    justify-content: center; /* Centrar horizontalmente */
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+.icon-svg {
+    width: 40px; /* Ajustar el tamaño de los íconos */
+    height: 40px; /* Ajustar la altura de los íconos */
+    margin: 0 5px; /* Espacio entre íconos */
+}
+
+.project-links {
+    display: flex; /* Usar flexbox para alinear los enlaces */
+    justify-content: center; /* Centrar horizontalmente */
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+.icon-link {
+    margin: 0 10px; /* Espacio entre los enlaces */
+}
+
+.project-link {
+    display: inline-block; /* Hacer que el enlace sea un bloque en línea */
+    background: #1abc9c; /* Color de fondo del enlace */
+    color: #ffffff; /* Color del texto del enlace */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    transition: background 0.3s; /* Transición suave para el fondo */
+}
+
+.project-link:hover {
+    background: #16a085; /* Color de fondo al pasar el mouse */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    h2 {
+        font-size: 2rem; /* Tamaño de fuente más pequeño para el título en pantallas pequeñas */
+    }
+
+    .projects-container {
+        padding: 40px 10px; /* Espaciado reducido en pantallas pequeñas */
+    }
+}
+
+/* Efecto de entrada */
+[data-aos].aos-animate {
+    opacity: 1; /* Mostrar la tarjeta cuando se activa la animación */
+    transform: translateY(0); /* Restablecer la posición al entrar */
+}
+
+
+
+/*-------------*/
+
+/* Estilos para la sección "Contacto" */
+#contact {
+    padding: 60px 20px; /* Espaciado superior e inferior */
+    background: rgba(44, 62, 80, 0.9); /* Fondo semitransparente */
+}
+
+.container {
+    max-width: 1200px; /* Limitar el ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    text-align: center; /* Centrar el texto */
+}
+
+h2 {
+    font-size: 3.5rem; /* Tamaño de fuente para el título */
+    margin-bottom: 20px; /* Margen inferior */
+    color: #1abc9c; /* Color del título */
+}
+
+.contact-form {
+    display: flex; /* Usar flexbox para organizar el formulario y la información de contacto */
+    flex-direction: row; /* Organizar en fila */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: flex-start; /* Alinear al inicio */
+    margin-bottom: 40px; /* Margen inferior */
+}
+
+form {
+    flex: 1; /* Tomar espacio disponible */
+    margin-right: 20px; /* Espacio entre el formulario y la información de contacto */
+    max-width: 400px; /* Ancho máximo del formulario */
+}
+
+.form-group {
+    width: 100%; /* Ancho completo */
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+label {
+    display: block; /* Hacer que la etiqueta ocupe todo el ancho */
+    margin-bottom: 5px; /* Margen inferior */
+    color: #ffffff; /* Color del texto */
+}
+
+input, textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    color: #ffffff; /* Color del texto */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+button {
+    background: #1abc9c; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    transition: background 0.3s; /* Transición suave para el fondo */
+}
+
+button:hover {
+    background: #16a085; /* Color de fondo al pasar el mouse */
+}
+
+.contact-info {
+    flex: 1; /* Tomar espacio disponible */
+    margin-left: 20px; /* Espacio entre la información de contacto y el formulario */
+    text-align: center; /* Centrar texto */
+}
+
+.contact-info h2 {
+    font-size: 2.5rem; /* Tamaño de fuente para el texto de contacto */
+    color: #ffffff; /* Color del texto */
+}
+
+.social-icons {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    display: flex; /* Usar flexbox para alinear los íconos */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.social-icons li {
+    margin: 0 10px; /* Espacio entre íconos */
+}
+
+.social-icons img {
+    width: 50px; /* Tamaño de los íconos */
+    height: 50px; /* Altura de los íconos */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contact-form {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar elementos en columna */
+    }
+
+    form {
+        margin-right: 0; /* Eliminar margen en pantallas pequeñas */
+        margin-bottom: 20px; /* Margen inferior para separación */
+        max-width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+
+    .contact-info {
+        margin-left: 0; /* Eliminar margen en pantallas pequeñas */
+    }
+
+    h2 {
+        font-size: 2rem; /* Tamaño de fuente más pequeño para el título en pantallas pequeñas */
+    }
+}
+
+
+/*----------*/
+
+/* Estilos para el footer */
+footer {
+    background: rgba(44, 62, 80, 0.9); /* Fondo semitransparente */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrar el texto */
+    color: #ffffff; /* Color del texto */
+    position: relative; /* Posición relativa para el contenido */
+    border-top: 1px solid;
+}
+
+.footer-container {
+    max-width: 1200px; /* Limitar el ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+/* Estilos para el botón flotante */
+#scrollToTopBtn {
+    position: fixed; /* Fijo en la pantalla */
+    bottom: 20px; /* Espacio desde el fondo */
+    right: 20px; /* Espacio desde la derecha */
+    background-color: #1abc9c; /* Color de fondo */
+    color: white; /* Color del ícono */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    display: none; /* Ocultar por defecto */
+    transition: background 0.3s; /* Transición suave para el fondo */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #16a085; /* Color de fondo al pasar el mouse */
+}
+
+/* Mostrar el botón cuando se hace scroll */
+.show {
+    display: block; /* Mostrar el botón */
+}
+
+/* Responsividad para el footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 10px; /* Espaciado reducido en móviles */
+    }
+
+    .footer-container {
+        padding: 0 10px; /* Espaciado lateral en móviles */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Tamaño de fuente más pequeño para el título en móviles */
+    }
+}
