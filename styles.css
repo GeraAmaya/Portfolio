@@ -71,10 +71,13 @@ nav {
         flex-direction: column; /* Cambiar a columna */
         position: absolute; /* Posicionar absolutamente */
         top: 60px; /* Justo debajo de la navegación */
-        left: 0;
-        right: 0;
-        background: rgba(44, 62, 80, 0.9);
-        padding: 20px 0;
+      width: 90%;
+      border-radius: 30px;
+        background: rgba(3, 3, 3, 0.623);
+        padding: 20px 10px;
+right: 10px;
+        
+      
         z-index: 999; /* Asegurarse de que esté por encima */
     }
 
